@@ -167,7 +167,7 @@ img {
 
 /*hero*/
 
-.hero-container {
+.hero {
   max-width: 1440px;
   align-content: center;
   background-color: #2e2f42;
@@ -211,7 +211,7 @@ img {
   display: block;
   border-radius: 4px;
   margin: auto;
-  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 .hero-btn:hover {
@@ -366,9 +366,15 @@ img {
   display: flex;
   align-items: center;
   padding: 12px;
-  transition: background-color var(--transition);
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
+.team-soc-item:hover {
+	background-color: #31d0aa;
+}
+.team-soc-item:focus {
+  background-color: #31d0aa;
+}
 .team-soc-link {
   width: 100%;
   height: 100%;
@@ -376,10 +382,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+	background-color: #4d5ae5;
+	transform: background-color var(--transition);
 }
-.team-soc-link:hover,
+.team-soc-link:hover {
+	background-color: #31d0aa;
+}
 .team-soc-link:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
 
 .team-soc-icon {
@@ -387,22 +397,18 @@ img {
   fill: #f4f4fd;
   transform: background-color var(--transition);
 }
-.team-soc-icon:hover,
-.team-soc-icon:focus {
+.team-soc-icon:hover {
   background-color: #31d0aa;
 }
 
-.team-soc-item:hover,
 .team-soc-link:focus {
   background-color: #31d0aa;
 }
-.team-soc-link:hover,
-.team-soc-link:focus {
-  fill: #4d5ae5;
-}
+
 /*customer*/
 
 .customer {
+	padding-top: 120px;
   padding-bottom: 120px;
 }
 .customer-title {
@@ -423,6 +429,7 @@ img {
   gap: 24px;
 }
 .customer-item {
+	
   height: 88px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
@@ -434,16 +441,23 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+	color: #8E8F99;
+	border-color: #8E8F99;
   padding: 16px 32px;
-  transform: background-color var(--transition), transtorm var(--transition);
+  transform:  border-color var(--transition), color var(--transition);
 }
 .customer-link {
   width: 100%;
   height: 100%;
+	
 }
-.customer-item:hover,
+.customer-item:hover {
+	border-color:  #404bbf;
+	color: #404bbf;
+}
 .customer-item:focus {
-  border: 1px solid #404bbf;
+  border-color: #404bbf;
+	color: #404bbf;
 }
 .customer-item-icon {
   fill: #8e8f99;
@@ -451,7 +465,7 @@ img {
 }
 .customer-item-icon:hover,
 .customer-item-icon:focus {
-  fill: #404bbf;
+  fill: currentColor;
 }
 
 /*footer*/
@@ -505,7 +519,8 @@ img {
   align-items: center;
   fill: #f4f4fd;
 }
-.footer-soc-item {
+
+.footer-soc-link {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
@@ -517,8 +532,10 @@ img {
   transition: background-color var(--transition);
 }
 
-.footer-soc-item:hover,
-.footer-soc-item:focus {
+.footer-soc-link:hover {
+	background-color: #31d0aa;
+}
+.footer-soc-link:focus {
   background-color: #31d0aa;
 }
 
@@ -540,6 +557,8 @@ img {
 .btn-album {
   visibility: hidden;
 }
+
+
 .btn-link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -553,9 +572,10 @@ img {
   border: 1px solid #e7e9fc;
   margin: 0 auto;
   border-radius: 4px;
-  transition: background-color var(--transition), border var(--transition),
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition),
     box-shadow var(--transition);
 }
+
 
 .btn-link:hover,
 .btn-link:focus {
@@ -568,7 +588,7 @@ img {
 
 .btn-link:focus {
   color: #fff;
-  background: #404bbf;
+  background-color: #404bbf;
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -598,7 +618,11 @@ img {
 }
 
 .gallery-item:hover .gallery-cover-block {
-  transform: translate(0);
+  transform: translateY(0%);
+}
+
+.gallery-item:focus .gallery-cover-block {
+  transform: translateY(0%);
 }
 .gallery-block {
   position: relative;
@@ -617,6 +641,7 @@ img {
   transform: translateY(100%);
   transition: transform var(--transition);
 }
+
 .gallery-cover-title {
   font-weight: 400;
   font-size: 16px;
@@ -690,10 +715,13 @@ img {
   justify-content: center;
   background-color: #e7e9fc;
   padding: 0;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition); border var(--transition)
 }
 
-.modal-btn:hover,
+.modal-btn:hover {
+	background-color: #404bbf;
+  border: none;
+}
 .modal-btn:focus {
   background-color: #404bbf;
   border: none;
@@ -703,7 +731,9 @@ img {
   transition: fill var(--transition);
 }
 
-.modal-close:hover,
+.modal-close:hover {
+	fill: #fff;
+}
 .modal-close:focus {
   fill: #fff;
 }
