@@ -167,7 +167,7 @@ img {
 
 /*hero*/
 
-.hero-container {
+.hero {
   max-width: 1440px;
   align-content: center;
   background-color: #2e2f42;
@@ -180,6 +180,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+	margin: 0, auto;
 }
 
 .hero-title {
@@ -366,7 +367,7 @@ img {
   display: flex;
   align-items: center;
   padding: 12px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color var(--transition); 
 }
 
 .team-soc-item:hover {
@@ -378,7 +379,6 @@ img {
 .team-soc-link {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,8 +393,6 @@ img {
 }
 
 .team-soc-icon {
-	width: 100%;
-	height: 100%;
   display: block;
   fill: #f4f4fd;
   transform: background-color var(--transition);
@@ -421,17 +419,14 @@ img {
   text-align: center;
   text-transform: capitalize;
   color: var(--main-title-color);
-
   margin-bottom: 72px;
 }
 
 .customer-list {
   display: flex;
-
   gap: 24px;
 }
 .customer-item {
-	
   height: 88px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
@@ -451,12 +446,11 @@ img {
 .customer-link {
   width: 100%;
   height: 100%;
-	border: 1px solid #8e8f99;
-	border-radius:4px; 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color:  #8e8f99;
+	transition:  border-color var(--transition), color var(--transition);
 }
 
 .customer-link:hover {
