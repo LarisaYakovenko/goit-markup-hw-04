@@ -383,7 +383,7 @@ img {
   justify-content: center;
 	border-radius: 50%;
 	background-color: #4d5ae5;
-	transform: background-color var(--transition)
+	transition: background-color var(--transition)
 }
 .team-soc-link:hover {
 	background-color: #404bbf;
@@ -429,7 +429,8 @@ img {
 	justify-content: center;
 }
 .customer-item {
-  height: 88px;
+  width: 168px;
+	height: 88px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -443,14 +444,14 @@ img {
   transition:  border-color var(--transition), color var(--transition);
 }
 .customer-link {
-  
+	width: 100%;
+  height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color:  #8e8f99;
 	transition:  border-color var(--transition), color var(--transition);
-	width: 100%;
-  height: 100%;
+
 }
 
 .customer-link:hover {
@@ -637,11 +638,11 @@ img {
   overflow: hidden;
 }
 
-.gallery-block:hover .gallery-cover-text {
+.gallery-link:hover .gallery-cover-text {
   transform: translateY(0%);
 }
 
-.gallery-block:focus .gallery-cover-text {
+.gallery-link:focus .gallery-cover-text {
   transform: translateY(0%);
 }
 .gallery-cover-text {
@@ -649,9 +650,7 @@ img {
 	top: 0;
   left: 0;
 	height: 100%;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
 	background-color: #4d5ae5;
   font-weight: 400;
   font-size: 16px;
